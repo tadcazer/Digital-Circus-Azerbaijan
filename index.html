@@ -11,13 +11,33 @@
             margin: 0;
             padding: 20px;
             background-color: #1a1a1a;
-            /* Arka plan deseni - yolunuzu gerektiği gibi güncelleyin */
+            /* Arka plan resmi - Glitch linkini buraya yapıştır */
             background-image: url('images/background.png'); 
             background-repeat: repeat;
             background-attachment: fixed;
             background-size: auto;
         }
         
+        /* YENİ: Uyarı Paneli Stili */
+        .alert-box {
+            background-color: rgba(229, 9, 20, 0.2); /* Kırmızı şeffaf arka plan */
+            border: 2px solid #e50914;
+            color: #ff9999;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.01); }
+            100% { transform: scale(1); }
+        }
+
         header {
             text-align: center;
             padding: 20px;
@@ -27,21 +47,17 @@
             margin-bottom: 20px;
         }
 
-        /* YENİ: Logo ve Bayrak Konteyneri Stili */
         .logo-section {
             display: flex;
-            justify-content: space-around; /* Logo ve bayrağı ayırır */
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Küçük ekranlarda sarmayı sağlar */
-            margin-bottom: 20px; /* Alttaki başlığa boşluk bırakır */
+            margin-bottom: 20px;
         }
 
         .main-logo-image {
-            max-width: 400px; /* Orijinal görselin genişliğini koruyun veya sınırlayın */
+            max-width: 400px;
             height: auto;
-            border-radius: 10px; /* Hafif yuvarlama */
-            display: block;
-            margin: 0 auto; /* Konteyner içinde merkezler */
+            border-radius: 10px;
         }
 
         .container {
@@ -82,20 +98,25 @@
             cursor: pointer;
             margin-top: 10px;
             width: 100%;
+            font-weight: bold;
         }
         button:hover { background: #b20710; }
         
         footer {
             margin-top: 50px;
             text-align: center;
-            color: #ccc;
+            color: #888;
             background-color: rgba(26, 26, 26, 0.85);
-            padding: 10px;
+            padding: 15px;
             border-radius: 10px;
         }
     </style>
 </head>
 <body>
+
+<div class="alert-box">
+    ⚠️ DİQQƏT: Rəqəmsal Circus hələ ki Azərbaycana gəlməyib. Tezliklə gözlənilir!
+</div>
 
 <header>
     <div class="logo-section">
@@ -103,7 +124,7 @@
     </div>
 
     <h1>🎬 Azerbaycan Sinema Portalı</h1>
-    <p>Park Cinema, CinemaPlus, CineMastercard ve AF Media seansları</p>
+    <p>Park Cinema, CineMastercard ve AF Media seansları</p>
 </header>
 
 <div class="container">
@@ -111,14 +132,14 @@
         <h2>Park Cinema</h2>
         <p>Alev Kuleleri, Metro Park, Zagulba</p>
         <div class="status">● Seanslar Aktif</div>
-        <button onclick="location.href='https://parkcinema.az'">Filmlere Bak</button>
+        <button onclick="location.href='https://parkcinema.az'">Filmlərə Bax</button>
     </div>
 
     <div class="cinema-card cinemastercard">
         <h2>CineMastercard</h2>
         <p>28 Mall, Ganjlik Mall, Deniz Mall</p>
         <div class="status">● Seanslar Aktif</div>
-        <button onclick="location.href='https://www.cinemastercard.az'">Filmlere Bak</button>
+        <button onclick="location.href='https://www.cinemastercard.az'">Filmlərə Bax</button>
     </div>
 
     <div class="cinema-card af-media">
@@ -130,7 +151,7 @@
 </div>
 
 <footer style="margin-top: 50px; text-align: center; color: #888;">
-    <p>&copy; 2026 Film Azerbaycan - Glitch Üzerinde Barındırılmaktadır</p>
+    <p>&copy; 2026 Digital Circus Azerbaijan - Glitch Üzerinde Barındırılmaktadır</p>
 </footer>
 
 </body>
